@@ -1,11 +1,11 @@
 import sys, os, allure
 
 sys.path.append(os.getcwd())
-
+sys.setdefaultencoding('utf-8')
 from Page.Page import Page_Obj
 from Base.InitDiver import init_driver
 #from Base.Read_Data import ret_yaml_data
-import pytest
+#import pytest
 
 
 # def yaml_data():
