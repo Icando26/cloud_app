@@ -1,0 +1,8 @@
+a:
+  sms_code: &code
+    code_info: 123456
+  login:
+    name: lili
+    pwd: '456'
+    sex: 男
+    <<: *code
