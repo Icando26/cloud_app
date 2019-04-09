@@ -1,7 +1,7 @@
 import sys, os, allure
 
 sys.path.append(os.getcwd())
-sys.setdefaultencoding('utf8')
+
 from Page.Page import Page_Obj
 from Base.InitDiver import init_driver
 from Base.Read_Data import ret_yaml_data
@@ -27,13 +27,13 @@ class Test_Search_Page:
         self.search_obj.search_return()
         self.driver.quit()
 
-    @pytest.mark.parametrize("test_num,text,expect_data", yaml_data())
+    #@pytest.mark.parametrize("test_num,text,expect_data", yaml_data())
     #@pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.step('测试搜索')
     @allure.issue('http://www.baidu.com','Test')
-    def test_input_text(self, test_num, text, expect_data):
-        print("用例编号:", test_num)
-        allure.attach('描述',"执行测试步骤"+test_num)
+    def test_input_text(self):
+        print("用例编号:")
+        allure.attach('描述',"执行测试步骤")
         self.search_obj.search_input("你好")
-        self.driver.get_screenshot_as_file("./screen/%s.png" % test_num)
-        assert expect_data == 456
+        #self.driver.get_screenshot_as_file("./screen/%s.png" % )
+        # assert expect_data == 456
