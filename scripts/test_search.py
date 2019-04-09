@@ -1,7 +1,7 @@
 import sys, os, allure
 
 sys.path.append(os.getcwd())
-
+sys.setdefaultencoding('utf8')
 from Page.Page import Page_Obj
 from Base.InitDiver import init_driver
 from Base.Read_Data import ret_yaml_data
